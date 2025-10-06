@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Impact Tracker - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="login-container">
+        <div class="navbar">
+            <span class="menu-icon">&#9776;</span>
+            <span class="site-title">ECO IMPACT TRACKER</span>
+        </div>
+        <form>
+            <h2>Welcome again!</h2>
+            <p>Please enter your details</p>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <span class="toggle-password" onclick="togglePassword()">👁️</span>
+            </div>
+            <div class="options">
+                <label>
+                    <input type="checkbox" id="remember"> Remember me
+                </label>
+                <a href="#" class="forgot">Forgot Password?</a>
+            </div>
+            <button type="submit" class="login-btn">Log In</button>
+            <button type="button" class="new-account-btn">
+                🌐 Create New Account
+            </button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

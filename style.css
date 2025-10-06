@@ -1,0 +1,151 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #f9f9f3;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('login_background.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.login-container {
+    position: relative;
+    z-index: 2;
+    max-width: 370px;
+    margin: 0 auto;
+    top: 6vh;
+    background: rgba(255,255,255,0.84);
+    border-radius: 20px;
+    padding: 32px 18px 26px 18px;
+    box-shadow: 0 6px 24px rgba(50,90,50,0.11);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-icon {
+    font-size: 1.55em;
+    margin-right: 12px;
+}
+
+.site-title {
+    font-size: 1.15em;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    color: #253921;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 6px 0;
+    font-size: 1.18em;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 0.98em;
+    color: #444;
+}
+
+label {
+    display: block;
+    margin: 16px 0 4px 2px;
+    font-size: 0.98em;
+    font-weight: 500;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 11px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 7px;
+    font-size: 1em;
+    background: #f7faf5;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 8px; right: 15px;
+    cursor: pointer;
+    font-size: 1.13em;
+    color: #666;
+    user-select: none;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 17px;
+    font-size: 0.97em;
+}
+
+.options input[type="checkbox"] {
+    accent-color: #3fa665;
+}
+
+.forgot {
+    text-decoration: none;
+    color: #096c33;
+    font-size: 0.95em;
+}
+
+.login-btn {
+    width: 100%;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 19px;
+    font-size: 1.09em;
+    padding: 13px 0;
+    margin-top: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.new-account-btn {
+    width: 100%;
+    background: #e8f3e5;
+    color: #222;
+    border: none;
+    border-radius: 19px;
+    font-size: 1em;
+    padding: 12px 0;
+    margin-top: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+@media (max-width: 450px) {
+    .login-container {
+        max-width: 97vw;
+        padding: 26px 4vw 20px 4vw;
+    }
+    .site-title {
+        font-size: 1em;
+    }
+}
