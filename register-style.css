@@ -1,0 +1,204 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #f9f9f3;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('login_background.png') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.register-container {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+    margin: 0 auto;
+    top: 5vh;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    margin-right: 12px;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.site-title {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+h2 {
+    text-align: left;
+    margin: 0 0 30px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+label {
+    display: block;
+    margin: 20px 0 8px 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    font-size: 15px;
+    background: transparent;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    color: #999;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-bottom-color: #4a7c59;
+}
+
+input[type="email"]::placeholder,
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #ccc;
+    font-style: italic;
+}
+
+.check-icon {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    color: #4CAF50;
+    font-size: 20px;
+    display: none;
+}
+
+input:valid ~ .check-icon {
+    display: block;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #999;
+    user-select: none;
+}
+
+.terms {
+    margin: 25px 0 20px 0;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    user-select: none;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #00BCD4;
+}
+
+.checkmark {
+    margin-left: 5px;
+}
+
+.signup-btn {
+    width: 100%;
+    background: #2d5a3d;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 14px 0;
+    margin-top: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.signup-btn:hover {
+    background: #1a4d2e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(26, 77, 46, 0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .register-container {
+        max-width: calc(100% - 30px);
+        margin: 0 15px;
+        padding: 25px 20px;
+        top: 3vh;
+    }
+    
+    .site-title {
+        font-size: 14px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-height: 700px) {
+    .register-container {
+        top: 2vh;
+        padding: 20px;
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        margin: 15px 0 6px 0;
+    }
+}
