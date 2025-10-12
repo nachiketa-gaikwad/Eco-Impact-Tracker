@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #f5f5f0;
+    overflow-x: hidden;
+}
+
+/* Top Section with Forest Background */
+.top-section {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: url('homepage_background1.jpg') no-repeat center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    z-index: 10;
+}
+
+.menu-icon {
+    font-size: 28px;
+    margin-right: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+.site-title {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: white;
+}
+
+/* Scan Button */
+.scan-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.scan-btn {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    margin-bottom: 10px;
+}
+
+.scan-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.scan-btn:active {
+    transform: scale(0.95);
+}
+
+.scan-text {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+}
+
+.scan-subtitle {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Credits Section */
+.credits-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: -60px;
+    z-index: 5;
+}
+
+.credits-card {
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+    max-width: 350px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.credits-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.co2-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d5a3d;
+}
+
+.co2-text sub {
+    font-size: 16px;
+}
+
+.credits-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+}
+
+.credits-circle {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 8px solid #2d5a3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.credits-number {
+    font-size: 72px;
+    font-weight: 800;
+    color: #f59e0b;
+}
+
+.leaf-decoration {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 32px;
+}
+
+/* Information Section */
+.info-section {
+    padding: 40px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.info-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.info-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.info-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.info-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.logo-text {
+    line-height: 1.1;
+}
+
+.eco-text {
+    font-size: 36px;
+    font-weight: 800;
+    color: #2d5a3d;
+    display: block;
+}
+
+.impact-text {
+    font-size: 36px;
+    font-weight: 800;
+    color: #f5f5f0;
+    -webkit-text-stroke: 2px #2d5a3d;
+    text-stroke: 2px #2d5a3d;
+    display: block;
+}
+
+.tracker-text {
+    font-size: 36px;
+    font-weight: 800;
+    color: #2d5a3d;
+    display: block;
+}
+
+.eco-icon {
+    flex-shrink: 0;
+}
+
+/* Wave Background at Bottom */
+.wave-background {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    background: url('homepage_background2.jpg') no-repeat center bottom;
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .top-section {
+        height: 45vh;
+    }
+    
+    .site-title {
+        font-size: 14px;
+    }
+    
+    .scan-btn {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .scan-text {
+        font-size: 24px;
+    }
+    
+    .credits-card {
+        padding: 25px 20px;
+    }
+    
+    .credits-circle {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .credits-number {
+        font-size: 60px;
+    }
+    
+    .info-section {
+        padding: 30px 15px;
+    }
+    
+    .info-title {
+        font-size: 20px;
+    }
+    
+    .info-content {
+        padding: 15px;
+    }
+    
+    .info-content p {
+        font-size: 14px;
+    }
+    
+    .logo-section {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .eco-text, .impact-text, .tracker-text {
+        font-size: 28px;
+    }
+}
+
+@media (max-height: 700px) {
+    .top-section {
+        height: 40vh;
+    }
+    
+    .credits-section {
+        margin-top: -40px;
+    }
+}

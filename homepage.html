@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Impact Tracker - Home</title>
+    <link rel="stylesheet" href="homepage-style.css">
+</head>
+<body>
+    <!-- Top Section with Forest Background -->
+    <div class="top-section">
+        <div class="navbar">
+            <span class="menu-icon">&#9776;</span>
+            <span class="site-title">ECO IMPACT TRACKER</span>
+        </div>
+        
+        <div class="scan-container">
+            <button class="scan-btn" onclick="uploadBill()">
+                <span class="scan-text">SCAN</span>
+            </button>
+            <p class="scan-subtitle">Upload your bills here</p>
+        </div>
+    </div>
+
+    <!-- Credits Card Section -->
+    <div class="credits-section">
+        <div class="credits-card">
+            <div class="credits-icon">
+                <svg width="60" height="60" viewBox="0 0 60 60">
+                    <!-- Footprint -->
+                    <ellipse cx="25" cy="15" rx="8" ry="10" fill="#2d5a3d"/>
+                    <ellipse cx="25" cy="30" rx="6" ry="8" fill="#2d5a3d"/>
+                    <ellipse cx="25" cy="43" rx="5" ry="7" fill="#2d5a3d"/>
+                    <ellipse cx="20" cy="55" rx="4" ry="5" fill="#2d5a3d"/>
+                    <ellipse cx="30" cy="55" rx="4" ry="5" fill="#2d5a3d"/>
+                    <!-- Leaf -->
+                    <path d="M 35 20 Q 40 15, 45 20 Q 42 25, 35 20" fill="#4CAF50"/>
+                    <line x1="35" y1="20" x2="42" y2="22" stroke="#4CAF50" stroke-width="1"/>
+                </svg>
+                <span class="co2-text">CO<sub>2</sub></span>
+            </div>
+            <h2 class="credits-title">Total Credit Earned</h2>
+            <div class="credits-circle">
+                <div class="credits-number">55</div>
+                <div class="leaf-decoration">🌿</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Information Section -->
+    <div class="info-section">
+        <h3 class="info-title">🌱 What is a Carbon Footprint?</h3>
+        
+        <div class="info-content">
+            <p>
+                the atmosphere as a result of our daily activities such as transportation, electricity use, and even buying groceries. Understanding our carbon footprint is important because it helps us become more aware of how our choices affect the environment.
+            </p>
+            
+            <p>
+                By reducing our carbon footprint, we can lower the risks of climate change, conserve resources, and promote sustainable living. Simple actions like using public transport, saving electricity, or choosing eco-friendly products can make a big difference. Reducing emissions not only helps the planet but also improves air quality, lowers energy costs, and ensures a healthier environment for future generations.
+            </p>
+        </div>
+
+        <div class="logo-section">
+            <h1 class="logo-text">
+                <span class="eco-text">ECO</span><br>
+                <span class="impact-text">IMPACT</span><br>
+                <span class="tracker-text">TRACKER</span>
+            </h1>
+            
+            <div class="eco-icon">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="#4CAF50" opacity="0.2"/>
+                    <circle cx="50" cy="50" r="35" fill="#2d5a3d" opacity="0.3"/>
+                    <!-- Hand -->
+                    <path d="M 30 60 Q 30 50, 35 45 L 40 50 Q 45 45, 50 45 Q 55 45, 60 50 L 65 45 Q 70 50, 70 60 Q 70 70, 50 75 Q 30 70, 30 60" fill="#4CAF50"/>
+                    <!-- Globe -->
+                    <circle cx="50" cy="35" r="15" fill="#81c784"/>
+                    <path d="M 40 30 Q 50 25, 60 30" stroke="#2d5a3d" stroke-width="2" fill="none"/>
+                    <path d="M 40 40 Q 50 35, 60 40" stroke="#2d5a3d" stroke-width="2" fill="none"/>
+                    <line x1="50" y1="20" x2="50" y2="50" stroke="#2d5a3d" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Wave Background -->
+    <div class="wave-background"></div>
+
+    <script src="homepage-script.js"></script>
+</body>
+</html>
