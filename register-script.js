@@ -5,36 +5,51 @@ function togglePassword() {
     passwordInput.type = type;
 }
 
-// Handle login form submission
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+// Show check marks when inputs are valid
+document.addEventListener('DOMContentLoaded', function() {
     
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const remember = document.getElementById('remember').checked;
-    
-    // Here you would typically send the login request to your backend
-    console.log('Login attempted with:', {
-        email: email,
-        rememberMe: remember
+    document.getElementById('email').addEventListener('input', function() {
+        const emailCheck = document.getElementById('emailCheck');
+        if (this.validity.valid && this.value.length > 0) {
+            emailCheck.style.display = 'block';
+        } else {
+            emailCheck.style.display = 'none';
+        }
     });
-    
-    // Example: You would replace this with actual authentication
-    alert('Login functionality would be connected to your backend here!');
-    
-    // Example of what you might do after successful login:
-    // window.location.href = 'dashboard.html';
-});
 
-// Handle create account button
-function createAccount() {
-    // Navigate to registration page
-    window.location.href = 'register.html';
-}
+    document.getElementById('fullname').addEventListener('input', function() {
+        const nameCheck = document.getElementById('nameCheck');
+        if (this.value.length > 2) {
+            nameCheck.style.display = 'block';
+        } else {
+            nameCheck.style.display = 'none';
+        }
+    });
 
-// Menu icon click handler (optional - for future menu functionality)
-document.querySelector('.menu-icon').addEventListener('click', function() {
-    // Add your menu toggle functionality here
-    console.log('Menu clicked');
-    // Example: toggleMenu();
+    // Handle form submission
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const email = document.getElementById('email').value;
+        const fullname = document.getElementById('fullname').value;
+        const password = document.getElementById('password').value;
+        const terms = document.getElementById('terms').checked;
+        
+        if (!terms) {
+            alert('Please agree to the Terms & Conditions');
+            return;
+        }
+        
+        console.log('Registration successful:', email);
+        
+        alert('Account created successfully! Redirecting to homepage...');
+        
+        // Redirect to homepage after successful registration
+        window.location.href = 'homepage.html';
+    });
+
+    // Menu icon click handler
+    document.querySelector('.menu-icon').addEventListener('click', function() {
+        console.log('Menu clicked');
+    });
 });
