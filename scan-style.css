@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #f5f5f0;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Top Section with Forest Background */
+.top-section {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    background: url('homepage_background1.jpg') no-repeat center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    z-index: 10;
+}
+
+.back-icon {
+    font-size: 32px;
+    margin-right: 15px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.site-title {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: white;
+}
+
+.scan-label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scan-text {
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 3px;
+}
+
+/* Upload Section */
+.upload-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: -80px;
+    z-index: 5;
+}
+
+.upload-card {
+    background: rgba(45, 90, 61, 0.95);
+    border-radius: 25px;
+    padding: 30px;
+    max-width: 380px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.camera-area {
+    background: rgba(26, 77, 46, 0.8);
+    border-radius: 20px;
+    padding: 60px 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 25px;
+    border: 3px dashed rgba(255, 255, 255, 0.3);
+}
+
+.camera-area:hover {
+    background: rgba(26, 77, 46, 0.9);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.camera-area.has-file {
+    border-color: #4CAF50;
+    border-style: solid;
+}
+
+.camera-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.camera-text {
+    color: white;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.upload-btn {
+    width: 100%;
+    background: white;
+    color: #2d5a3d;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 14px 0;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.upload-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.upload-btn:active {
+    transform: translateY(0);
+}
+
+.upload-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Credits Display */
+.credits-earned {
+    margin-top: 30px;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.credits-badge {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.credits-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.co2-small {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2d5a3d;
+}
+
+.co2-small sub {
+    font-size: 12px;
+}
+
+.credits-circle-small {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 6px solid #2d5a3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.credits-number-small {
+    font-size: 48px;
+    font-weight: 800;
+    color: #f59e0b;
+}
+
+.leaf-small {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+}
+
+/* Processing Overlay */
+.processing-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #4CAF50;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.processing-overlay p {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Success Modal */
+.success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: white;
+    border-radius: 25px;
+    padding: 40px 30px;
+    max-width: 350px;
+    width: 90%;
+    text-align: center;
+    animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+    margin: 0 auto 20px;
+    font-weight: bold;
+}
+
+.modal-content h2 {
+    font-size: 28px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.modal-content strong {
+    color: #4CAF50;
+    font-size: 20px;
+}
+
+.modal-btn {
+    width: 100%;
+    background: #2d5a3d;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 14px 0;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+.modal-btn:hover {
+    background: #1a4d2e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-btn-secondary {
+    width: 100%;
+    background: #e8f5e9;
+    color: #2d5a3d;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 12px 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal-btn-secondary:hover {
+    background: #c8e6c9;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .top-section {
+        height: 30vh;
+    }
+    
+    .scan-text {
+        font-size: 28px;
+    }
+    
+    .upload-card {
+        padding: 25px 20px;
+    }
+    
+    .camera-area {
+        padding: 40px 20px;
+    }
+    
+    .camera-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .upload-section {
+        margin-top: -60px;
+    }
+}
+
+@media (max-height: 700px) {
+    .top-section {
+        height: 25vh;
+    }
+    
+    .upload-section {
+        margin-top: -50px;
+    }
+}
